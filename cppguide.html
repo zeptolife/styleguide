@@ -169,22 +169,22 @@ input.</p>
 
 <h2 id="ZeptoDeviationsAndExtensions">Zepto Deviations and Extensions</h2>
 
-<p>This section defines a few deviations we will be enforcing at Zepto Life Technologies</p>
+<p>This section defines a few deviations we will be enforcing at Zepto Life Technologies.</p>
 
 <ul>
   <li>Source files shal be full camelcase and use cpp and hpp extensions.  Example: <code>LikeThisClass.cpp AndLikeThisHeader.hpp</code></li>
 
   <li>Private member variables of a class shal contain names with a leading underscore and contain underscores to separate words.  Example: <code>int _a_private_member_variable = 3;</code></li>
 
-  <li>All variables shal contain names with underscores to separate words as described in the previous point.</li>
+  <li>All variables shal contain names with underscores to separate words and be all lowercase as described in the previous point.</li>
 
   <li>All public and private, methods, signals and slots shall be <code>LabledInFullCamelCase()</code>.</li>
 
-  <li>Use Getters and Setter methods rather than directly accessing public variables of a class.  Example <code>int GetSpeed(); void SetSpeed(int speed);</code></li>
+  <li>Use Getters and Setter methods rather than directly accessing public or private variables of a class.  Example <code>int GetSpeed(); void SetSpeed(int speed);</code></li>
 
   <li>Do variable initialization directly in the hpp file, rather than using class variable initializer lists.</li>
 
-  <li>Interestingly, Google doens't allow try/catch blocks, however, we are going to use them.  No need to handcuff ourselves out of the gate.  Here's an interesting discussion on the ideas: https://stackoverflow.com/questions/5184115/google-c-style-guides-no-exceptions-rule-stl</li>
+  <li>Interestingly, Google doens't allow try/catch blocks, however, we are going to use them.  No need to handcuff ourselves out of the gate.  Here's an interesting discussion on the ideas: <a href="https://stackoverflow.com/questions/5184115/google-c-style-guides-no-exceptions-rule-stl"></li>
 
   <li>When using a namespace, don't put the class's code starting at column 4, just start everything at column 0 even if you have a namespace wrapping your code.</li>
 
