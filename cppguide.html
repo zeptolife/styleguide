@@ -178,19 +178,23 @@ input.</p>
 
   <li>All variables shal contain names with underscores to separate words as described in the previous point.</code></li>
 
-  <li>All methods shall be <code>LabledInFullCamelCase()</code></li>
+  <li>All public and private, methods, signals and slots shall be <code>LabledInFullCamelCase()</code>.</li>
 
-  <li>Use Getters and Setter methods rather than directly accessing public variables of a class.  Example <code>int GetSpeed(); and int SetSpeed(int speed);<code/></li>
+  <li>Use Getters and Setter methods rather than directly accessing public variables of a class.  Example <code>int GetSpeed(); int SetSpeed(int speed);</code></li>
 
-  <li>Do variable initialization directly in the hpp file, rather than using class variable initializer lists.</code></li>
+  <li>Do variable initialization directly in the hpp file, rather than using class variable initializer lists.</li>
 
-  <li>Interestingly, Google doens't allow try/catch blocks, however, we are going to use them.  No need to handcuff ourselves out of the gate.  Here's an interesting discussion on the ideas: https://stackoverflow.com/questions/5184115/google-c-style-guides-no-exceptions-rule-stl</code></li>
+  <li>Interestingly, Google doens't allow try/catch blocks, however, we are going to use them.  No need to handcuff ourselves out of the gate.  Here's an interesting discussion on the ideas: https://stackoverflow.com/questions/5184115/google-c-style-guides-no-exceptions-rule-stl</li>
 
-  <li>When using a namespace, don't put the class's code starting at column 4, just start everything at column 0 even if you have a namespace wrapping your code.</code></li>
+  <li>When using a namespace, don't put the class's code starting at column 4, just start everything at column 0 even if you have a namespace wrapping your code.</li>
 
-  <li>All pointers should have "_ptr" appended to it's name.  This simply adds clarity.  Example: int* current_speed_ptr</code></li>
+  <li>All pointers should have "_ptr" appended to it's name.  This simply adds clarity.  Example: <code>int* current_speed_ptr</code></li>
 
-  <li>The "*" for a pointer should be put next to the type, as illustrated in the previous example.</code></li>
+  <li>The "*" for a pointer should be put next to the type, as illustrated in the previous example.</li>
+
+  <li>All curly brackets occupy their own line.  We want verbosity and clarity in our code, not shorthand.</li>
+
+  <li>In Qt land, all signals and slots should start with the term "Signal" or "Slot."  Example <code>SignalBatteryLevelChanged(); SlotBatteryLevelChanged(double new_percentage);</code>.</li>
 
   <li>Comment liberally.</code></li>
 
