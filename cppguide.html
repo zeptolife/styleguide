@@ -17,8 +17,8 @@
 
 <p>Zepto Life Technology is a big fan of this Google C++ Style Guide.  So much so
 that we decided to fork the guide and make it our own!  We intend to follow this 
-guide as well as we can.  Below you will also find a listing of deviations 
-developersshal follow.</p>
+guide as well as we can.  Below you will find a listing of Zepto deviations and extensions 
+developers shal also follow.</p>
 
 <h2 class="ignoreLink" id="Background">Background</h2>
 
@@ -167,10 +167,34 @@ input.</p>
 </div>
 
 
-<h2 id="ZeptoDeviations">Zepto Deviations</h2>
+<h2 id="ZeptoDeviationsAndExtensions">Zepto Deviations and Extensions</h2>
 
-<p>
-Does this end up in the table of contents?</p>
+<p>This section defines a few deviations we will be enforcing at Zepto Life Technologies</p>
+
+<ul>
+  <li>Source files shal be full camelcase and use cpp and hpp extensions.  Example: <code>LikeThisClass.cpp AndLikeThisHeader.hpp</code></li>
+
+  <li>Private member variables of a class shal contain names with a leading underscore and contain underscores to separate words.  Example: <code>int _a_private_member_variable = 3;<code/></li>
+
+  <li>All variables shal contain names with underscores to separate words as described in the previous point.</code></li>
+
+  <li>All methods shall be <code>LabledInFullCamelCase()</code></li>
+
+  <li>Use Getters and Setter methods rather than directly accessing public variables of a class.  Example <code>int GetSpeed(); and int SetSpeed(int speed);<code/></li>
+
+  <li>Do variable initialization directly in the hpp file, rather than using class variable initializer lists.</code></li>
+
+  <li>Interestingly, Google doens't allow try/catch blocks, however, we are going to use them.  No need to handcuff ourselves out of the gate.  Here's an interesting discussion on the ideas: https://stackoverflow.com/questions/5184115/google-c-style-guides-no-exceptions-rule-stl</code></li>
+
+  <li>When using a namespace, don't put the class's code starting at column 4, just start everything at column 0 even if you have a namespace wrapping your code.</code></li>
+
+  <li>All pointers should have "_ptr" appended to it's name.  This simply adds clarity.  Example: int* current_speed_ptr</code></li>
+
+  <li>The "*" for a pointer should be put next to the type, as illustrated in the previous example.</code></li>
+
+  <li>Comment liberally.</code></li>
+
+</ul>
 
 <h2 id="C++_Version">C++ Version</h2>
 
