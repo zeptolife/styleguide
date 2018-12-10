@@ -1,3 +1,10 @@
+Zepto Life C++ Style Guide
+===================
+This style guide set was derrived from Google's Style Guides.  There are several deviations in the C++ style guide and the C++ style guide is the only one Zepto is currently enforcing.
+
+See the published Github Pages document for a list of C++ style deviations:
+<a href="https://zeptolife.github.io/styleguide/cppguide.html#ZeptoDeviationsAndExtensions"></a> 
+
 Google Style Guides
 ===================
 
