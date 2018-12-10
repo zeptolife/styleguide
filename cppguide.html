@@ -192,9 +192,21 @@ input.</p>
 
   <li>The "*" for a pointer should be put next to the type, as illustrated in the previous example.</li>
 
-  <li>All curly brackets occupy their own line.  We want verbosity and clarity in our code, not shorthand.</li>
+  <li>We want verbosity and clarity in our code, not shorthand.</li>
+
+  <li>We require "K & R Line Curly Brace and Tab Style with the 1TBS variant." (ie, Use K & R but no "if," or "else" statements should exists without a pair of curly braces.)  See <a href="https://en.wikipedia.org/wiki/Indentation_style">.</li>
 
   <li>In Qt land, all signals and slots should start with the term "Signal" or "Slot."  Example <code>SignalBatteryLevelChanged(); SlotBatteryLevelChanged(double new_percentage);</code>.</li>
+
+  <li>Our C++ Gui is using the Qt Framework, therefore we should use Qt types where ever possible.  For example use QString over std::string.</li>
+
+  <li>We prefer C++ fundamental types over stdtypes.h types in general over, for example, explicit sized types from stdint.h.  For example we prefer "int" over "int32_t" - we are not planning on running the V2xxGui C++ application on machines with less than 32bit instructions so in general "int" will be appropriate in almost all use cases.  If an algorithm or piece of code very much depends on a specific variable size, then obviously use explicitly sized types from stdint.h in that case.</li>
+
+  <li>All code commited to master in the V2xxGui shal have 100% Doxygen compliant code comments coverage in class header files.  Note, Qt Creator's hot-key for comment block headers works perfectly - use "/*!" above a function or variable declaration then press Enter to generate appropriate comment blocks.</li>
+
+  <li>General format of a C++ header file in the V2xxGui application should follow the following section ordering: "#ifndef CLASS_HPP" Multiple Include Guard, External Includes (things we did not write, for example <code>#include <QString></code>), Local Includes (includes we wrote for our application), #Defines, Using Namespace Declarations, Class Namespace Declaration, Class, Q_PROPERTIE(s), Public, Signals, Slots, Protected, Private.  For C++ headers not developed against the Qt Framework, omit the Q_PROPERTIES, Signals and Slots sections.</li>
+
+  <li>//TODO comments - All incomplete, broken, in need of review, or otherwise "imperfect" areas of code should tagged with a comment which looks like <code>//TODO GMR-XXX - Short description of issue here.</code> where XXX is the Jira task number (which has been created) that details the problem in the code.</li>
 
   <li>Comment liberally.</li>
 
